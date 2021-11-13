@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
 body {
-  font-family: "Poppins", Verdana, sans-serif;
+  font-family: Poppins, Verdana, sans-serif;
   padding: 3rem;
-  font-size: 1.5rem;
+  font-size: calc(16px + 5vw);
   color: rgb(27, 10, 54);
 }
 
 h1 {
   font-weight: 600;
-  font-size: 3.4rem;
+  font-size: calc(34px + 5vw);
 }
 p {
   font-weight: 300;
@@ -48,5 +48,24 @@ a:hover:after {
   }
   a::after {
     background: rgba(215, 208, 240, 0.11);
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    font-size: calc(16px + 2vw);
+  }
+}
+@media (max-width: 500px) {
+  body {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 4.25rem;
   }
 }
