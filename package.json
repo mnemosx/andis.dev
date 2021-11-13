@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "andis.dev personal site",
   "main": "index.html",
+  "author": {
+    "name": "Andis Kačerovskis",
+    "email": "hello@andis.dev",
+    "url": "https://andis.dev"
+  },
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
