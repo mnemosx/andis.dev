@@ -1,5 +1,5 @@
 {
-  "name": "andis.dev personal site",
+  "name": "personal site",
   "version": "1.0.0",
   "description": "andis.dev personal site",
   "main": "index.html",
@@ -9,11 +9,9 @@
   },
   "dependencies": { "parcel-bundler": "^1.6.1" },
   "devDependencies": {
-    "@babel/core": "7.2.0",
-    "typescript": "4.4.4"
+    "@babel/core": "7.2.0"
   },
   "resolutions": {
     "@babel/preset-env": "7.13.8"
-  },
-  "keywords": ["javascript", "starter"]
+  }
 }
