@@ -1,2 +1,2 @@
 # andis.dev
-Created with CodeSandbox
+Placeholder site
