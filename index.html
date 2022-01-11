@@ -23,10 +23,32 @@
   </head>
 
   <body>
+    <button onclick="rotateCube()">🇱🇻</button>
     <div>
       <h1>Hello 👋</h1>
-      <p>Meklē frontend izstrādātāju? Uzraksti</p>
-      <a href="mailto:hello@andis.dev">hello@andis.dev</a>
+
+      <div id="cube">
+        <div class="lang-lv">
+          <p>Meklē frontend izstrādātāju? Uzraksti</p>
+          <a href="mailto:hello@andis.dev">hello@andis.dev</a>
+        </div>
+        <div class="lang-en">
+          <p>Looking for a frontend dev? Leave me a message at</p>
+          <a href="mailto:hello@andis.dev">hello@andis.dev</a>
+        </div>
+      </div>
     </div>
+    <script>
+      function rotateCube() {
+        const cube = document.getElementById("cube");
+        const btn = document.getElementsByTagName("button")[0];
+        cube.classList.toggle("show-en");
+        if(btn.textContent === '🇱🇻') {
+          btn.textContent = '🇬🇧'
+        } else {
+          btn.textContent = '🇱🇻'
+        }
+      }
+    </script>
   </body>
 </html>

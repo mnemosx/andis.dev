@@ -4,6 +4,46 @@ body {
   padding: 3rem;
   font-size: calc(16px + 5vw);
   color: rgb(27, 10, 54);
+  -webkit-perspective: 1000px;
+}
+
+#cube {
+	height: 200px;
+
+	-webkit-transition: -webkit-transform .5s;
+	transition: transform .5s;
+
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.lang-lv,.lang-en {
+	display: flex;
+	align-items: center;
+  flex-wrap: wrap;
+	background: rgb(31, 29, 34);
+
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+
+	height: 200px;
+}
+
+.lang-lv {
+	-webkit-transform: translateZ(100px);
+	transform: translateZ(100px);
+  padding-bottom: 3rem;
+}
+
+.lang-en {
+  padding-top: 3rem;
+	-webkit-transform: rotateX(-90deg) translateZ(-100px);
+	transform: rotateX(-90deg) translateZ(-100px);
+}
+
+#cube.show-en {
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
 }
 
 h1 {
@@ -13,12 +53,25 @@ h1 {
 p {
   font-weight: 300;
   display: inline;
+  margin: 0;
+  margin-right: 1vw;
 }
-a {
+a, button {
   position: relative;
   overflow: hidden;
   text-decoration: none;
   color: rgb(61, 18, 139);
+}
+button {
+  background: none;
+	border: none;
+	padding: 0;
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
 }
 a::after {
   content: "";
@@ -43,10 +96,10 @@ a:hover:after {
     color: rgb(197, 205, 226);
     background: rgb(31, 29, 34);
   }
-  a {
+  a, button {
     color: rgb(191, 162, 247);
   }
-  a::after {
+  a::after, button::after {
     background: rgba(215, 208, 240, 0.11);
   }
 }
