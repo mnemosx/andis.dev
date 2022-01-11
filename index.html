@@ -26,8 +26,11 @@
     <button onclick="rotateCube()">🇱🇻</button>
     <div>
       <h1>Hello 👋</h1>
-
-      <div id="cube">
+        <div id="no-cube" style="display: none">
+          <p>Meklē frontend izstrādātāju? Uzraksti</p>
+          <a href="mailto:hello@andis.dev">hello@andis.dev</a>
+        </div>
+        <div id="cube">
         <div class="lang-lv">
           <p>Meklē frontend izstrādātāju? Uzraksti</p>
           <a href="mailto:hello@andis.dev">hello@andis.dev</a>
@@ -38,6 +41,26 @@
         </div>
       </div>
     </div>
+    <script>
+      let browser_name = '';
+      isIE = /*@cc_on!@*/false || !!document.documentMode;
+      isEdge = !isIE && !!window.StyleMedia;
+      if(navigator.userAgent.indexOf("Chrome") != -1 && !isEdge) {
+        browser_name = 'chrome';
+      } else if(navigator.userAgent.indexOf("Safari") != -1 && !isEdge) {
+        browser_name = 'safari';
+      } else {
+        browser_name = 'other-browser';
+      }
+      const cube = document.getElementById("cube")
+      const noCube = document.getElementById("no-cube")
+      const btn = document.getElementsByTagName("button")[0];
+      if(browser_name === 'safari') {
+        cube.style.display = 'none';
+        btn.style.display = 'none';
+        noCube.style.display = 'block';
+      }
+    </script>
     <script>
       function rotateCube() {
         const cube = document.getElementById("cube");
